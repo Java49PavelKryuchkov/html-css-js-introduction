@@ -1,30 +1,30 @@
 .logo {
-
+text-align: center; font-size: 3em;
 }
 .main-class {
     
 }
 .details-container {
-    
+    display: block; text-align: center;
 }
 .details-image {
     
 }
 .details-title {
-    
+    display: block;
 }
 .thumbnails-list {
    
 }
 .thumbnails-item {
-    
+    display: inline-block; font-size: 1.5em;
 }
 .thumbnails-anchor {
     
 }
-.thumbnails.image {
-    
+.thumbnails-image {
+    width: 550px; 
 }
-.thumbnail.title {
-    
+.thumbnails-title {
+    display: block;
 }
