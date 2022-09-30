@@ -1,0 +1,43 @@
+:root {
+    --cell-width: 4vw;
+    --cell-height: 4vw;
+}
+
+body, html {
+    height: 100%;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0;
+}
+
+.board {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.board-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.cell-black {
+    width: var(--cell-width);
+    height: var(--cell-height);
+    background-color:black;
+    border: 1px;
+    border-style:outset;
+    border-color: black;
+}
+
+.cell-white {
+    width: var(--cell-width);
+    height: var(--cell-height);
+    background-color:white;
+    border: 1px;
+    border-style:outset;
+    border-color: black;
+}
