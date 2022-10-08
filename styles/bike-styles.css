@@ -59,6 +59,7 @@ body {
  position: absolute;
  left: 12vw;
  bottom: 2vw;
+ font-size: 2em;
  }
 
  .thumbnails-list {
@@ -148,7 +149,7 @@ body {
         font-size: 2.5em;
     }
     .details-title {
-        font-size: 1.5em;
+        font-size: 2.5em;
         left: -1vw;
         bottom: 6vw;
     }
