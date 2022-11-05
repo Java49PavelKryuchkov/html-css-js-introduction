@@ -1,54 +1,74 @@
-// function sumDigits(number) {
-//     if (number < 0) {
-//         number = number *- 1;
-//     }
-//     let resid = 0;
-//     let sum = 0;
-//    do {
-//     resid = number%10;
-//     sum = sum + resid;
-//     number = ~~(number/10);
-//    }
 
-//    while (number != 0);
-//     return sum; }
-// console.log(sumDigits(-1234));
+function checkTeudatZehut(ar) {
+    let arStr = Array.from(ar);
+    let res = 0;
+    let rem = 0;
+    let evenOrOdd = arStr.map(function(digit, index){
+        if (index % 2 != 0 && digit * 2 <10) {
+         res = digit * 2;
+        }
+        else if (index % 2 != 0 && digit * 2 >= 10){
+            res = 0;
+            rem = 0;
+            digit = digit * 2;
+            while (digit != 0) { 
+                rem  = digit % 10;
+                res = res + rem;
+                digit = Math.trunc(digit / 10);
+        }}
+        else  {
+            res = digit * 1;
+        }
+        return res;
+    })
+    let sumDigits = evenOrOdd.reduce(function(res, cur){
+        return res + cur;
+    })
 
+    return sumDigits % 10 == 0 ? true : false;
+}
 
-function getSymbol(digit) {
-    let codeA = 'a'.charCodeAt();
-    if (digit > 9) {
-        digit = String.fromCharCode(codeA + digit - 10);
+function generateRandomTeudatZeut() {
+    let str = "";
+    let count = 0;
+    while (count !=8) {
+        str = str + Math.round(Math.random() * 9);
+        count++;
+}
+    let arStr = Array.from(str);
+    let res = 0;
+    let rem = 0;
+    let evenOrOdd = arStr.map(function(digit, index){
+        if (index % 2 != 0 && digit * 2 <10) {
+         res = digit * 2;
+        }
+        else if (index % 2 != 0 && digit * 2 >= 10){
+            res = 0;
+            rem = 0;
+            digit = digit * 2;
+            while (digit != 0) { 
+                rem  = digit % 10;
+                res = res + rem;
+                digit = Math.trunc(digit / 10);
+        }}
+        else  {
+            res = digit * 1;
+        }
+        return res;
+    })
+    let sumDigits = evenOrOdd.reduce(function(res, cur){
+        return res + cur;
+    })
+
+    function lastDigit () {
+        let digit = 0;
+        while ((sumDigits + digit) % 10 != 0) {
+        digit++;
     }
-      
-   return digit;
-    //31 - 10 + 97
+    return digit;
 }
-function fromNumberToString(number, base) {
-    number = Math.abs(number);
-    let res = "";
-    do {
-        let digit = number % base;
-        let sym = getSymbol(digit);
-        res = sym + res;
-        number = Math.trunc(number / base);
+return str + lastDigit();
+}
 
-    } while(number != 0);
-    return res;
-
-}
-function getDigit(symbol) {
-    let codeA = 'a'.charCodeAt();
-    let res = symbol < '9' ? +symbol : symbol.charCodeAt() - codeA + 10;
-    return res;
-}
-function fromStringToNumber(string, base) {
- 
-    string = string.toLowerCase();
-    let result = 0;
-    for (let i = 0; i < string.length; i++) {
-        let digit = getDigit(string[i]);
-        result = result * base + digit;
-    }
-    return result;
-}
+console.log(checkTeudatZehut("291186096"));
+console.log(generateRandomTeudatZeut());
