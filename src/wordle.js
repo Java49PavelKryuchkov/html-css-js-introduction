@@ -1,6 +1,10 @@
 const word = "table";
 const N_LETTERS = 5;
 const letterElements = document.querySelectorAll(".letter-guess");
+let attemptsCounter = document.querySelector(".counter-number");
+let text = document.querySelector(".counter-text");
+let count = 6;
+attemptsCounter.innerHTML = count;
 function onChange(event) {
     const wordGuess = event.target.value;
     if (wordGuess.length != N_LETTERS) {
@@ -16,7 +20,19 @@ function onChange(event) {
             }
             return res;
         })
-        colors.forEach((c, i) => letterElements[i].style.color=c)
-
+        colors.forEach((c, i) => letterElements[i].style.color=c);
+            if (wordGuess != word) {
+            count--;
+            attemptsCounter.innerHTML = count;
+    } else if (wordGuess != word){
+            text.innerHTML = "Sorry, your guess trials are ended up";
+            text.style.color = 'red';
+            attemptsCounter.innerHTML = "";
+    } else {
+        text.innerHTML = "Congratulations - you have guessed word";
+        text.style.color = 'green';
+        attemptsCounter.innerHTML = "";
     }
+}
+
 }
