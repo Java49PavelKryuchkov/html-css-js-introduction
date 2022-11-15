@@ -21,18 +21,19 @@ function onChange(event) {
             return res;
         })
         colors.forEach((c, i) => letterElements[i].style.color=c);
-            if (wordGuess != word) {
-            count--;
-            attemptsCounter.innerHTML = count;
-    } else if (wordGuess != word){
-            text.innerHTML = "Sorry, your guess trials are ended up";
-            text.style.color = 'red';
-            attemptsCounter.innerHTML = "";
-    } else {
+    if (wordGuess == word) {
         text.innerHTML = "Congratulations - you have guessed word";
         text.style.color = 'green';
         attemptsCounter.innerHTML = "";
     }
+        else if (wordGuess != word && count > 1) {
+            count--;
+            attemptsCounter.innerHTML = count;
+    } else if (wordGuess != word && count <= 1){
+            text.innerHTML = "Sorry, your guess trials are ended up";
+            text.style.color = 'red';
+            attemptsCounter.innerHTML = "";
+    } 
 }
 
 }
