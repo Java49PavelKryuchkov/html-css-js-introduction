@@ -12,10 +12,11 @@ body {
 }
 .movie-item {
     flex-direction: row;
-    display: block;
+}
+.movie-image {
+    display: inline;
 }
 .movie-title {
-    display: inline;
     font-size: 2em;
 }
 .movie-description {
