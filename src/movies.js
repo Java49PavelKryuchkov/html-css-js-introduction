@@ -3,9 +3,13 @@ const httpPrefix = "https://image.tmdb.org/t/p/w500";
 const moviesData = JSON.parse(jsonData);
 const ulElement = document.querySelector(".movies-list");
 ulElement.innerHTML = getPosterImages();
+const ulPopMovie = document.querySelector(".most-popular-movie")
+ulPopMovie.innerHTML = getPopularMovie();
 const sectionElement = document.querySelectorAll("section");
 
+function getPopularMovie() {
 
+}
 function getPosterImages () {
     const arImages = moviesData.results.map(element =>
        `<li class="movie-item">
