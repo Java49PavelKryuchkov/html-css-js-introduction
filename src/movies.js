@@ -10,8 +10,10 @@ function getPosterImages () {
     const arImages = moviesData.results.map(element =>
        `<li class="movie-item">
        <image class="movie-image" src="${httpPrefix}${element.backdrop_path}">
+       <div class="subsection">
        <span class="movie-title">${element.original_title}</span>
        <span class="movie-description">${element.overview}</span>
+       </div>
        </li>`);
         return arImages.join('');
 }

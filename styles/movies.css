@@ -11,15 +11,24 @@ body {
     list-style: none;
 }
 .movie-item {
+    display: flex;
     flex-direction: row;
+    margin-bottom: 5vh;
 }
 .movie-image {
-    display: inline;
+}
+.subsection {
+    display: flex;
+    flex-direction: column;
+    margin-left: 7vw;
 }
 .movie-title {
     font-size: 2em;
+    margin-bottom: 5vh;
 }
 .movie-description {
     display: inline;
     font-size: 1.5em;
+    width: 50vw;
+
 }
