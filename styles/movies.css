@@ -6,8 +6,19 @@ body {
     margin: 0;
 }
 .movies-list {
+    display: flex;
+    flex-direction: column;
     list-style: none;
 }
 .movie-item {
-    list-style: none;
+    flex-direction: row;
+    display: block;
+}
+.movie-title {
+    display: inline;
+    font-size: 2em;
+}
+.movie-description {
+    display: inline;
+    font-size: 1.5em;
 }

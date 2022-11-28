@@ -8,7 +8,9 @@ const sectionElement = document.querySelectorAll("section");
 
 function getPosterImages () {
     const arImages = moviesData.results.map(element =>
-       ` <li class="movie-item"><image class="movie-image" src="${httpPrefix}${element.backdrop_path}"></li>`);
+       ` <li class="movie-item"><image class="movie-image" src="${httpPrefix}${element.backdrop_path}">
+       <span class="movie-title">${element.original_title}</span>
+       <span class="movie-description">${element.overview}</span></li>`);
         return arImages.join('');
 }
 function show(index) {
