@@ -8,7 +8,7 @@
     <title>Forms</title>
 </head>
 <body>
-    <form id="personal-info" onsubmit="onSubmit(event)" class="submit-class">
+    <form id="personal-info" onsubmit="onSubmit(event)" class="form-class">
         <input type="text" name="employeeName" required placeholder="Enter employee name">
         <input type="email" name="emailName" required placeholder="Enter your email">
         <input type="date" name="birthdayDate">
@@ -26,9 +26,9 @@
                 Marketing
             </option>
         </select>
-        <input type="number" name="salary" required placeholder="Enter your Salary">
-        <button class="submitButton">Submit</button>
-        <button class="resetButtom">Reset</button>
+        <input type="number" name="salary" required placeholder="Enter your Salary" onchange="onChange(event)">
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
     </form>
     <script src="src/fomrs.js"></script>
 </body>
