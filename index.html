@@ -26,7 +26,10 @@
                 Marketing
             </option>
         </select>
-        <input type="number" name="salary" required placeholder="Enter your Salary" onchange="onChange(event)">
+        <div class="salary-class">
+            <input id="salary-design" type="number" name="salary" required placeholder="Enter your Salary" onchange="onChange(event)">
+            <label id="salary-message" hidden>Salary should be in a range 1000-10000</label>
+        </div>
         <button type="submit">Submit</button>
         <button type="reset">Reset</button>
     </form>
