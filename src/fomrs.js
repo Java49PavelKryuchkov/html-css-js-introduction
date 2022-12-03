@@ -8,7 +8,7 @@ function onSubmit(event) {
         res[cur.name] = cur.value;
         return res;
     }, {});
-    console.log(employee);
+    return employee;
 }
 function onChange(event) {
     if(event.target.name == "salary") {
