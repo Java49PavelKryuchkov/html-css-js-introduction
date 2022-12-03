@@ -15,9 +15,10 @@ function onChange(event) {
         if(+event.target.value<1000 || +event.target.value>10000) {
             event.target.value = '';
             salaryElement.hidden = false;
-            salaryDesign.bacgroundColor = 'red';
+            salaryDesign.style.background = 'red';
         } else {
             salaryElement.hidden = true;
+            salaryDesign.style.background = 'white';
         }
     }
 }
