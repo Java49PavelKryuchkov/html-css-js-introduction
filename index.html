@@ -11,7 +11,7 @@
     <form id="personal-info" onsubmit="onSubmit(event)" class="form-class">
         <input type="text" name="employeeName" required placeholder="Enter employee name">
         <input type="email" name="emailName" required placeholder="Enter your email">
-        <input type="date" name="birthdayDate">
+        <input type="date" name="birthdayDate" onchange="onChangeDate(event)">
         <select name="department">
             <option value hidden selected disabled>
                 --Select Department--
@@ -27,7 +27,8 @@
             </option>
         </select>
         <div class="salary-class">
-            <input id="salary-design" type="number" name="salary" required placeholder="Enter your Salary" onchange="onChange(event)">
+            <input id="salary-design" type="number" name="salary" required placeholder="Enter your Salary"
+            onchange="onChange(event)">
             <label class="salary-message" hidden>Salary should be in a range 1000-10000</label>
         </div>
         <button type="submit">Submit</button>

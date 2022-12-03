@@ -24,3 +24,7 @@ function onChange(event) {
         }
     }
 }
+function onChangeDate(event) {
+    if(event.target.name == "birthdayDate") {
+    }
+}
