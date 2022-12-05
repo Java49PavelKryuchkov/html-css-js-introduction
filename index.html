@@ -11,9 +11,8 @@
     <form id="personal-info" onsubmit="onSubmit(event)" class="form-class">
         <input type="text" name="employeeName"  placeholder="Enter employee name">
         <input type="email" name="emailName"  placeholder="Enter your email">
-        <input type="date" name="birthdayDate" onchange="onChangeDate(event)">
-        <label class="date-message" hidden>The year cannot be less than
-            1950 and greater than the current year</label>
+        <input type="date" name="birthdayDate" onchange="onChange(event)">
+        <p id="date-error"></p>
         <select name="department">
             <option value hidden selected disabled>
                 --Select Department--
@@ -28,9 +27,9 @@
                 Marketing
             </option>
         </select>
-            <input id="salary-design" type="number" name="salary" required placeholder="Enter your Salary"
+            <input id="salary-design" type="number" name="salary"  placeholder="Enter your Salary"
             onchange="onChange(event)">
-            <label class="salary-message" hidden>Salary should be in a range 1000-10000</label>
+            <p id="salary-error"></p>
         <button type="submit">Submit</button>
         <button type="reset">Reset</button>
     </form>
