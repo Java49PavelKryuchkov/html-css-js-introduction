@@ -8,7 +8,14 @@ const MAX_SALARY = 10000;
 const salaryErrorElement = document.getElementById("salary-error");
 const dateErrorElement = document.getElementById("date-error");
 const SET_MAX_INTERVAL = 5000;
+const sectionElements = document.querySelectorAll("section");
 
+function show(index) {
+    sectionElements.forEach(section => {
+        section.hidden = true;
+    });
+    sectionElements[index].hidden = false;
+}
 function onSubmit(event) {
     event.preventDefault();
     const employee = Array.from(inputElements).reduce((res, cur) => {
