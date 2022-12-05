@@ -8,6 +8,10 @@
     <title>Forms</title>
 </head>
 <body>
+    <button id="cleate-employees" onchange="show(0)">Create Employees</button>
+    <button id="show-employees" onchange="show(1)">Show Employees</button>
+    <button id="employees-by-salary" onchange="show(2)">Filter Employees by Salary</button>
+    <section hidden>
     <form id="personal-info" onsubmit="onSubmit(event)" class="form-class">
         <input type="text" name="employeeName"  placeholder="Enter employee name">
         <input type="email" name="emailName"  placeholder="Enter your email">
@@ -33,6 +37,13 @@
         <button type="submit">Submit</button>
         <button type="reset">Reset</button>
     </form>
+</section>
+<section hidden>
+
+</section>
+<section hidden>
+
+</section>
     <script src="src/fomrs.js"></script>
 </body>
 </html>
