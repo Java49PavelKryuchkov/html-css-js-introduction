@@ -9,6 +9,9 @@ const salaryErrorElement = document.getElementById("salary-error");
 const dateErrorElement = document.getElementById("date-error");
 const SET_MAX_INTERVAL = 5000;
 const sectionElements = document.querySelectorAll("section");
+const employeesElement = document.getElementById("employees-list");
+const company = new Company();
+employeesElement.innerHTML = company.getAllEmployees();
 
 function show(index) {
     sectionElements.forEach(section => {
@@ -22,7 +25,7 @@ function onSubmit(event) {
         res[cur.name] = cur.value;
         return res;
     }, {});
-    return employee;
+    company.hireEmployee(employee);
 }
 function onChange(event) {
     if(event.target.name == "salary") {
@@ -57,4 +60,13 @@ function showErrorMessage (message, element, errorElement) {
 
 function getMaxDate() {
     return new Date().getFullYear();
+}
+function Company() {
+    this.employees = [];
+}
+Company.prototype.hireEmployee = function(employee) {
+    this.employees.push(employee);
+}
+Company.prototype.getAllEmployees = function() {
+    return this.employees;
 }
