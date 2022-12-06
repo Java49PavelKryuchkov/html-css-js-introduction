@@ -11,7 +11,7 @@ const SET_MAX_INTERVAL = 5000;
 const sectionElements = document.querySelectorAll("section");
 const employeesElement = document.getElementById("employees-list");
 const company = new Company();
-employeesElement.innerHTML = company.getAllEmployees();
+// employeesElement.innerHTML = company.getAllEmployees();
 
 function show(index) {
     sectionElements.forEach(section => {
@@ -26,6 +26,7 @@ function onSubmit(event) {
         return res;
     }, {});
     company.hireEmployee(employee);
+    console.log(company.getAllEmployees());
 }
 function onChange(event) {
     if(event.target.name == "salary") {
