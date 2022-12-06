@@ -11,7 +11,7 @@ const SET_MAX_INTERVAL = 5000;
 const sectionElements = document.querySelectorAll("section");
 const employeesElement = document.getElementById("employees-list");
 const company = new Company();
-// employeesElement.innerHTML = company.getAllEmployees();
+employeesElement.innerHTML = getListOfEmployees();
 
 function show(index) {
     sectionElements.forEach(section => {
@@ -70,4 +70,7 @@ Company.prototype.hireEmployee = function(employee) {
 }
 Company.prototype.getAllEmployees = function() {
     return this.employees;
+}
+function getListOfEmployees(){
+    return `${company.getAllEmployees}`;
 }
