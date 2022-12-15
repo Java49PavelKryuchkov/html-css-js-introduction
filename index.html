@@ -13,13 +13,13 @@
     <button onclick="show(2)">Show Book by Number of Pages</button>
     <button onclick="show(3)">Show Book by the Author</button>
     <section hidden>
-    <form class="form-class" onsubmit="onSubmit(event)">
+    <form id="book_form" class="form-class">
         <input type="text" name="bookname" placeholder="Name of Book">
         <input type="text" name="author" placeholder="Author's Name">
-        <input type="date" name="issuedate" onchange="onChange(event)">
-        <p id="dateError"></p>
-        <input type="number" name="numberofpages" placeholder="Number of Pages" onchange="onChange(event)">
-        <p id="pagesError"></p>
+        <input id="date_input" type="date" name="issuedate">
+        <p id="date_error"></p>
+        <input id="pages_input" type="number" name="numberofpages" placeholder="Number of Pages">
+        <p id="pages_error"></p>
         <select name="genre" required>
             <option value hidden selected disabled>
                 --Select Genre--
@@ -40,14 +40,14 @@
     </ul>
 </section>
 <section hidden>
-    <form class="form_pages_range" onsubmit="onSubmitByPages(event)">
-        <input type="number" name="pages_from" placeholder="Pages from" onchange="pagesFromRange(event)">
-        <input type="number" name="pages_to" placeholder="Pages to" onchange="pagesToRange(event)">
+    <form id="books_pages_form" class="form_pages_range" >
+        <input id="pages_f" type="number" name="pages_from" placeholder="Pages from">
+        <input id="pages_t" type="number" name="pages_to" placeholder="Pages to">
         <button type="submit">Search</button>
         <button type="reset">Reset</button>
     </form>
-    <p id="pages_range"></p>
-    <p id="pages_range_error"></p>
+    <p id="books_pages"></p>
+    <p id="books_pages_error"></p>
 </section>
 <section hidden>
     <form onsubmit="onSubmitByAuthor(event)">
@@ -57,6 +57,6 @@
         <p id="author_element"></p>
     </form>
 </section>
-<script src="src/main.js"></script>
+<script src="src/main.js" type="module"></script>
 </body>
 </html>
