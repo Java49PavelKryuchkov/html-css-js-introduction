@@ -11,7 +11,7 @@ export class Book {
     getBooksByPages(pagesFrom, pagesTo) {
         return this.books.filter(e => e.numberofpages >= pagesFrom && e.numberofpages <= pagesTo);
     }
-    getAuthorBooks(author) {
+    getBooksByAuthor(author) {
         return this.books.filter(e => author == e.author);
     }
 }

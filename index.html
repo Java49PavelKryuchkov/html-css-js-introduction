@@ -8,10 +8,12 @@
     <title>Forms</title>
 </head>
 <body>
+    <div class="main-buttons">
     <button onclick="show(0)">Add Book</button>
     <button onclick="show(1)">Show Books</button>
     <button onclick="show(2)">Show Book by Number of Pages</button>
     <button onclick="show(3)">Show Book by the Author</button>
+    </div>
     <section hidden>
     <form id="book_form" class="form-class">
         <input type="text" name="bookname" placeholder="Name of Book">
@@ -35,7 +37,7 @@
     </form>
 </section>
 <section hidden>
-    <ul id="showbooks">
+    <ul id="showbooks" class="book-list-element">
         
     </ul>
 </section>
@@ -50,11 +52,11 @@
     <p id="books_pages_error"></p>
 </section>
 <section hidden>
-    <form onsubmit="onSubmitByAuthor(event)">
-        <input type="text"  placeholder="Author's Name" required onchange="booksByAuthor(event)">
+    <form id="author_form">
+        <input id="author_input" type="text"  placeholder="Author's Name" required>
         <button type="submit">Search</button>
         <button type="reset">Reset</button>
-        <p id="author_element"></p>
+        <p id="books_author"></p>
     </form>
 </section>
 <script src="src/main.js" type="module"></script>

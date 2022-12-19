@@ -9,10 +9,10 @@ export class BookList {
 }
 function showListOfBooks(books) {
     return books.map(e => `<ui class="item-element">
-    <p>Name Of the Book: ${e.bookname}</p>
+    <p class="beige">Name Of the Book: ${e.bookname}</p>
     <p>Author's Name: ${e.author}</p>
-    <p>Year: ${e.issuedate}</p>
+    <p class="beige">Year: ${e.issuedate}</p>
     <p>Number of Pages: ${e.numberofpages}</p>
-    <p>Genre: ${e.genre}</p>
+    <p class="beige">Genre: ${e.genre}</p>
     </ui>`).join('');
 }

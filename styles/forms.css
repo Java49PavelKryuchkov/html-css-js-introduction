@@ -1,0 +1,24 @@
+body {
+    height: 100%;
+}
+.main-buttons {
+    margin: 2vh
+}
+.active {
+    background-color: blueviolet;
+    color: beige;
+}
+.book-list-element {
+    display:flex;
+    flex-direction: row;
+}
+.item-element {
+    border-style: solid;
+    border-radius: 20px;
+    border-color: black;
+    margin: 5vw;
+}
+.beige {
+    background-color: bisque;
+    display: block;
+}
